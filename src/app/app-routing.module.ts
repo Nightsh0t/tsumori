@@ -4,10 +4,11 @@ import { HomeComponent } from './home/home.component';
 import { BuilderComponent } from './builder/builder.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 const routes: Routes = [
-  // { path: '/yourComponent', component: yourComponent }
+  // { path: '/yourComponent', component: YourComponent }
 
   // Home
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -18,7 +19,11 @@ const routes: Routes = [
 
   // Login/Register
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent }
+  { path: 'register', component: RegisterComponent },
+
+  // 404
+  { path: '404', component: NotFoundComponent },
+  { path: '**', redirectTo: '/404', pathMatch: 'full' }
 ];
 
 @NgModule({
