@@ -1,4 +1,5 @@
 # Tsumori
+Tsumori (つもり): to express a plan or intention.
 
 ## Live Version
 - [Tsumori](https://tsumori.kokoro.pw/)
