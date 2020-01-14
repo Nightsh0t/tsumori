@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { Version } from './version';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'hhs-sched-builder';
+  // Instance Variables
+  title = 'Tsumori';
+  version = Version;
+
+  // Constructor
+  constructor(private titleService: Title) {}
+
+  ngOnInit() {
+    // Set initial page title
+    this.titleService.setTitle(this.title);
+  }
 }

@@ -1,0 +1,67 @@
+/***********/
+/* Tsumori */
+/*  Theme  */
+/***********/
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+// Base components
+html {
+    // For footer
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    background-color: #2d2d2d;
+    color: #fff;
+}
+
+// Footer
+.footer {
+    
+    // Positioning
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    // Set the fixed height of the footer here
+    height: 60px;
+
+    // Vertically center the text there
+    line-height: 60px;
+
+    // Text
+    text-align: center;
+    
+
+}
+
+@media (max-width: 1024px) {
+    .footer {
+        display: none;
+    }
+}
+
+.footer-dark {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+// Card
+.card {
+    background-color: #1f1f1f;
+}
+
+.card-header {
+    border-color: #3d3d3d;
+}
+
+// Misc
+.bg-dark {
+    background-color: #1f1f1f !important;
+}
+
+.page {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
