@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { Version } from './version';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +9,6 @@ import { Version } from './version';
 export class AppComponent {
   // Instance Variables
   title = 'Tsumori';
-  version = Version;
 
   // Constructor
   constructor(private titleService: Title) {}
