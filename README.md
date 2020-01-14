@@ -1,6 +1,8 @@
-# HhsSchedBuilder
+# Tsumori
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
+## Dependencies
+- [Angular](https://github.com/angular/angular-cli) version 8.3.22.
+- [ng-bootstrap](https://ng-bootstrap.github.io/) using [Bootstrap 4](https://getbootstrap.com/)
 
 ## Development server
 
