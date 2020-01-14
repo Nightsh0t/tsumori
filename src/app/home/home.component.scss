@@ -18,6 +18,12 @@
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    #branding > #text {
+        font-size: 3rem;
+    }
+}
+
 #branding > #text > #sub-text {
     font-size: 1rem;
     margin-top: -1rem;
