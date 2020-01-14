@@ -1,5 +1,5 @@
 #branding {
-    //text-align: center;
+    text-align: center;
     display: flex;
     justify-content: center;
 }
@@ -16,6 +16,12 @@
     margin: auto;
     margin-left: 1rem;
     text-align: center;
+}
+
+@media (max-width: 480px) {
+    #branding > #text {
+        font-size: 3rem;
+    }
 }
 
 #branding > #text > #sub-text {

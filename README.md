@@ -1,4 +1,8 @@
 # Tsumori
+Tsumori (つもり): to express a plan or intention.
+
+## Live Version
+- [Tsumori](https://tsumori.kokoro.pw/)
 
 ## Dependencies
 - [Angular](https://github.com/angular/angular-cli) version 8.3.22.
