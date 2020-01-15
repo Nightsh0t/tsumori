@@ -8,6 +8,10 @@ Tsumori (つもり): to express a plan or intention.
 - [Angular](https://github.com/angular/angular-cli) version 8.3.22.
 - [ng-bootstrap](https://ng-bootstrap.github.io/) using [Bootstrap 4](https://getbootstrap.com/)
 
+## CSS
+- **theme.scss** is used for main styling components of our Bootstrap Framework.
+- For other/misc styles, their styling sheets can be found in their components folder. We follow this to maintain a good sense of organization.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
