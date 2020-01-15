@@ -10,7 +10,7 @@ Tsumori (つもり): to express a plan or intention.
 
 ## CSS
 - **theme.scss** is used for main styling components of our Bootstrap Framework.
-- For other/misc styles, their styling sheets can be found in their components folder. We follow this to maintain a good sense of organization.
+- For other/misc styles, their styling sheets can be found in their components' folder. We follow this to maintain a good sense of organization.
 
 ## Development server
 
