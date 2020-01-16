@@ -26,9 +26,16 @@
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.form-register input[type="password"] {
+
+.form-register input[type="password"]#inputPassword {
+  margin-bottom: -1px;
+  border-radius: 0;
+
+}
+
+.form-register input[type="password"]#inputPasswordAgain {
   margin-bottom: 10px;
   border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  border-top-right-radius: 0; 
 }
   
