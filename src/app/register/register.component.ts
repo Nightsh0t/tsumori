@@ -7,6 +7,7 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
+  public alert: boolean = false;
 
   constructor(private title: Title) { }
 
