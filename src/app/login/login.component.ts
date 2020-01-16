@@ -7,7 +7,7 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  alert: boolean = false;
+  public alert: boolean = false;
 
   constructor(private title: Title) { }
 
