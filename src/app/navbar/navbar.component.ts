@@ -9,7 +9,7 @@ import { AuthService } from '../auth.service';
 export class NavbarComponent implements OnInit {
   isNavbarCollapsed: boolean = false;
 
-  constructor(private auth: AuthService) {}
+  constructor(public auth: AuthService) {}
 
   ngOnInit() {
   }
