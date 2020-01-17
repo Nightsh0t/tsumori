@@ -11,7 +11,6 @@ import { AuthService } from '../auth.service';
 export class LoginComponent implements OnInit {
   public alert: boolean = true;
   public form: FormGroup;
-  public loginInvalid: boolean;
 
   constructor(private title: Title, private fb: FormBuilder, private authService: AuthService) { }
 
@@ -26,14 +25,13 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  
   async onSubmit() {
-    this.loginInvalid = false;
     if (this.form.valid) {
       try {
         await this.authService.login(this.form.value);      
       } catch (err) {
-        this.loginInvalid = true;
-        
+        //pass
       }
     }
   }

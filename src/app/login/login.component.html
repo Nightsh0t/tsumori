@@ -1,6 +1,6 @@
 <div class="container">
-    <ngb-alert type="danger" *ngIf="loginInvalid" (close)="loginInvalid=false">
-        Invalid <strong>username</strong> or <strong>password</strong>!
+    <ngb-alert type="danger" *ngIf="!alert" (close)="alert=true">
+        <strong>Login</strong> is currently disabled!
     </ngb-alert>
     <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-signin">
         <h1>Tsumori</h1>
