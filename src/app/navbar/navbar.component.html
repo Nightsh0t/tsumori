@@ -20,13 +20,23 @@
         </ul>
 
         <!-- Navbar Right -->
-        <ul class="navbar-nav ml-auto">
-            <li routerLinkActive="active" class="nav-item">
-                <a routerLink="/login" class="nav-link">Login</a>
-            </li>
-            <li routerLinkActive="active" class="nav-item">
-                <a routerLink="/register" class="nav-link">Register</a>
+        <ul *ngIf="auth.isLoggedIn | async as isLoggedIn; else loggedout" class="navbar-nav ml-auto">
+            <!-- Logout -->
+            <li class="nav-item">
+                <a (click)="logout()" class="nav-link">Logout</a>
             </li>
         </ul>
+        <ng-template #loggedout>
+            <ul class="navbar-nav ml-auto">
+                <!-- Login -->
+                <li routerLinkActive="active" class="nav-item">
+                    <a routerLink="/login" class="nav-link">Login</a>
+                </li>
+                <!-- Register -->
+                <li routerLinkActive="active" class="nav-item">
+                    <a routerLink="/register" class="nav-link">Register</a>
+                </li>
+            </ul>
+        </ng-template>
     </div>
 </nav>
