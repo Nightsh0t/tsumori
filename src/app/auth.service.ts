@@ -13,10 +13,8 @@ export class AuthService {
   }
 
   constructor(private router: Router, private server: ServerService) {
-    console.log('Auth Service');
     const userData = localStorage.getItem('user');
     if (userData) {
-      console.log('Logging in from memory');
       const user = JSON.parse(userData);
       this.token = user.token;
       this.server.setLoggedIn(true, this.token);
@@ -51,6 +49,6 @@ export class AuthService {
 
     this.loggedIn.next(false);
     localStorage.clear();
-    this.router.navigate(['/']);
+    this.router.navigateByUrl('/');
   }
 }
