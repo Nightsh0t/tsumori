@@ -7,6 +7,7 @@ Tsumori (つもり): to express a plan or intention.
 ## Dependencies
 - [Angular](https://github.com/angular/angular-cli) version 8.3.22.
 - [ng-bootstrap](https://ng-bootstrap.github.io/) using [Bootstrap 4](https://getbootstrap.com/)
+- [tsuapi](https://github.com/nightsh0t/tsuapi) a custom API for Tsumori. (private)
 
 ## CSS
 - **theme.scss** is used for main styling components of our Bootstrap Framework.
