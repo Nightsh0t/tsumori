@@ -6,6 +6,7 @@ import { ServerService } from './server.service';
 @Injectable()
 export class AuthService {
   private loggedIn = new BehaviorSubject<boolean>(false);
+  private name: string;
   private token: string;
 
   // isLoggedIn
@@ -18,8 +19,7 @@ export class AuthService {
     // if so, login with that.
     const userData = localStorage.getItem('user');
     if (userData) {
-      const user = JSON.parse(userData);
-      this.token = user.token;
+      this.token = JSON.parse(userData).token;
       this.server.setLoggedIn(true, this.token); // tell the server we're logged in
       this.loggedIn.next(true); // tell the app we're logged in
     }
@@ -34,10 +34,12 @@ export class AuthService {
       }).subscribe((response: any) => {
         if (response.auth === true && response.token !== undefined) {
           this.token = response.token;
+          this.name = response.name;
           this.server.setLoggedIn(true, this.token); // tell the server we're logged in
           this.loggedIn.next(true); // tell the app we're logged in
           const userData = {
-            token: this.token,
+            name: this.name,
+            token: this.token
           };
           localStorage.setItem('user', JSON.stringify(userData)); // save auth token
           this.router.navigateByUrl('/'); // navigate home
@@ -54,5 +56,10 @@ export class AuthService {
     this.loggedIn.next(false); // tell the app we logged out
     localStorage.clear(); // delete auth token from storage
     this.router.navigateByUrl('/'); // navigate home
+  }
+
+  // Get User
+  public get user() {
+    return JSON.parse(localStorage.getItem('user'));
   }
 }

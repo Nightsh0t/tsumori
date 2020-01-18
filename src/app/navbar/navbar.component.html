@@ -20,12 +20,18 @@
         </ul>
 
         <!-- Navbar Right -->
-        <ul *ngIf="auth.isLoggedIn | async as isLoggedIn; else loggedOut" class="navbar-nav ml-auto">
-            <!-- Logout -->
-            <li class="nav-item">
-                <a (click)="logout()" class="nav-link">Logout</a>
-            </li>
-        </ul>
+        <ng-template *ngIf="auth.isLoggedIn | async as isLoggedIn; then loggedIn else loggedOut"></ng-template>
+        <ng-template #loggedIn>
+            <ul  class="navbar-nav ml-auto">
+                <!-- Logout -->
+                <li class="nav-item">
+                    <span class="nav-link" id="name">{{ auth.user.name }}</span>
+                </li>
+                <li class="nav-item">
+                    <a (click)="logout()" class="nav-link">Logout</a>
+                </li>
+            </ul>
+        </ng-template>
         <ng-template #loggedOut>
             <ul class="navbar-nav ml-auto">
                 <!-- Login -->
