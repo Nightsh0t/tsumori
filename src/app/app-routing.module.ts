@@ -7,7 +7,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
-import { AuthGuard } from './auth.guard';
+import { AuthGuard } from './auth.guard'; // User must be logged in to use this path
+import { UnAuthGuard } from './unauth.guard'; // User must be logged out to use this path
 
 
 const routes: Routes = [
@@ -21,8 +22,8 @@ const routes: Routes = [
   { path: 'builder', component: BuilderComponent, canActivate: [AuthGuard] },
 
   // Login/Register
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent, canActivate: [UnAuthGuard] },
+  { path: 'register', component: RegisterComponent, canActivate: [UnAuthGuard] },
 
   // 404
   { path: '404', component: NotFoundComponent },
